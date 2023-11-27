@@ -1,0 +1,442 @@
+/* GERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+
+    --c1: #EAEAEA;
+    --c2: #D4BCB8;
+    --c3: #B59F9C;
+    --c4: #8C7B79;
+    --c5: #5E5250;
+    --c6: #5E5250;
+    --c7: #362F2E;
+
+}
+
+body {
+
+    background-color: var(--c7);
+    font-family: 'Righteous';
+
+}
+
+
+/* SCROLLBAR */
+
+body::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--c7);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--c3);
+    border: solid 2px var(--c7);
+    border-radius: 5px;
+  }
+
+
+
+/* NAVBAR */
+
+nav a {
+
+    color: var(--c4);
+    text-decoration: none;
+    transition: 0.4s;
+
+}
+
+nav a:hover {
+
+    color: var(--c3);
+
+}
+
+.navbar {
+
+    align-items: center;
+    background-color: var(--c7);
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+}
+
+.nav-list {
+
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+}
+
+.navbar button {
+
+    background: white;
+    border: none;
+    width: 20px;
+
+}
+
+.navbar i {
+
+    color: var(--c4);
+    width: 3vh;
+
+}
+
+
+
+/* CONTENT */
+
+.content {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inicio, .jogo {
+
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 100vh;
+
+}
+
+.racoon {
+
+    filter: saturate(0.8);
+
+}
+
+.texto {
+
+    color: var(--c4);
+    text-align: center;
+    font-size: 18px;padding: 2vh;
+
+}
+
+.text-ex {
+
+    margin-bottom: 2vw;
+
+}
+
+.texto button {
+
+    justify-content: baseline;
+    color: var(--c7);
+    border: none;
+    background-color: var(--c2);
+    border-radius: 5px;
+    padding: 1vh;
+    font-family: 'Righteous';
+    font-size: 16px;
+    margin-top: 3vh;
+    cursor: pointer;
+    transition: 0.4s;
+
+}
+
+.texto button:hover {
+
+    opacity: 0.7;
+
+}
+
+.line {
+
+    border: solid var(--c6) 1px;
+    width: 90%;
+    align-self: center;
+
+}
+
+.sobre img {
+
+    border: solid var(--c4);
+    border-radius: 100%;
+
+
+}
+
+.exemplos {
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+
+}
+
+.mario {
+
+    border-radius: 20px;
+
+}
+
+
+
+/* CARDS */
+
+.cards {
+
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+
+}
+
+.card {
+
+    align-items: center;
+    background-color: var(--c6);
+    border-radius: 24px;
+    color: var(--c7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2vh;
+    padding: 1vh;
+    text-decoration: none;
+    transition: all 0.5s;
+    width: 30%;
+
+}
+
+.size {
+
+    width: 90%;
+
+}
+
+.card:hover {
+
+    transform: scale(1.05);
+
+}
+
+.btn-card {
+
+    background-color: var(--c2);
+    border: none;
+    border-radius: 5px;
+    bottom: 0;
+    color: var(--c7);
+    cursor: pointer;
+    font-family: 'Righteous';
+    margin-bottom: 1vh;
+    padding: 10px;
+    transition: all 0.4s;
+    width: 50%;
+
+}
+
+.btn-card:hover {
+
+    opacity: 0.5;
+
+}
+
+.card > div > p {
+
+    color: var(--c4);
+    text-align: justify;
+    margin: 2vh;
+    margin-bottom: 4vh;
+
+}
+
+.ex7 {
+
+    display: flex;
+    flex-direction: column;
+    margin: 1vh;
+
+}
+
+.ex7 input {
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Righteous';
+    margin: 1vh;
+    padding: 1vh;
+
+}
+
+.btn-ex7 {
+
+    background-color: var(--c2);
+    color: var(--c7);
+    transition: 0.4s;
+
+}
+
+.btn-ex7:hover {
+
+    opacity: 0.7;
+
+}
+
+.card h3 {
+
+    text-align: center;
+
+}
+
+
+
+/* JOGO */
+
+.campo-minado {
+
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+canvas {
+    
+    border: 1px solid var(--c7);
+    
+}
+
+.game {
+    
+    background-color: var(--c5);
+    
+}
+
+.game-r {
+
+    height: 100vh;
+    margin-top: 10vh;
+
+}
+
+.game-r h1 {
+
+    color: var(--c3);
+    margin-bottom: 2vh;
+    text-align: center;
+
+}
+
+.game-r ul {
+
+    color: var(--c4);
+    flex-wrap: wrap;
+    margin-bottom: 5vh;
+
+}
+
+.game-p {
+    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    margin-top: 70px;
+    
+}
+
+.btn-game {
+    
+    background-color: var(--c2);
+    border: none;
+    border-radius: 5px;
+    bottom: 0;
+    color: var(--c7);
+    cursor: pointer;
+    font-family: 'Righteous';
+    margin-top: 2vh;
+    padding: 10px;
+    transition: all 0.4s;
+    
+}
+
+.btn-game:hover {
+    
+    opacity: 0.7;
+    
+}
+
+.btns-game {
+
+    display: flex;
+    gap: 2vh;
+
+}
+
+
+/* MEDIA QUERY */
+
+@media (width < 1160px) {
+
+    /* CARDS */
+
+    .card {
+
+        transition: none;
+        width: 60%;
+
+    }
+
+    .card:hover {
+
+        transform: none;
+
+    }
+
+    .cards {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .size {
+
+        width: 90%;
+    
+    }
+    
+}
+
+@media (width < 720px) {
+
+    /* CARDS */
+
+    .cards {
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+}

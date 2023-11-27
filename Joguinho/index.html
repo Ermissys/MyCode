@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <title>My Code | Mário</title>
+
+</head>
+<body>
+
+  <nav class="navbar"> 
+
+    <div class="nav-title">
+
+        <a href="./index.html#inicio"><h1>MY CODE</h1></a>
+
+    </div>
+
+    <button><i class="fa-solid fa-bars"></i></button>
+
+    <ul class="nav-list">
+
+        <a href="#inicio" class="nav-link"><li>Início</li></a>
+        <a href="#cm" class="nav-link"><li>Campo Minado</li></a>
+        <a href="#mj" class="nav-link"><li>Mário Jump</li></a>
+        <a href="#exemplos" class="nav-link"><li>Exemplos</li></a>
+
+    </ul>
+
+  </nav>
+  
+    <div class="game-board">
+
+      <img src="clouds.png" class="clouds">
+      <img src="mario.gif" class="mario">
+      <img src="pipe.png" class="pipe">
+
+      <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+        #placar {
+          font-family: 'Righteous', sans-serif;
+          font-size: 24px;
+          color: #333;
+          margin-bottom: 20px;
+        }
+      </style>
+    </head>
+    <body>
+      <div id="placar">Placar: 0</div>
+
+    
+      <script>
+
+        let obstaculoContador = 0;
+    
+
+        function atualizarPlacar() {
+          const placarElemento = document.getElementById('placar');
+          placarElemento.textContent = 'Placar: ' + obstaculoContador;
+        }
+    
+
+        function obstaculoUltrapassado() {
+          obstaculoContador++;
+          atualizarPlacar();
+        }
+    
+
+        function verificarColisaoComObstaculo() {
+
+          const colisao = Math.random() < 0.1; 
+          if (colisao) {
+            obstaculoUltrapassado();
+          }
+        }
+    
+
+        function loopDoJogo() {
+
+          verificarColisaoComObstaculo();
+    
+
+          requestAnimationFrame(loopDoJogo);
+        }
+    
+
+        window.onload = function () {
+          atualizarPlacar(); 
+          loopDoJogo(); 
+        };
+      </script>
+      
+    </div>
+
+</body>
+</html>

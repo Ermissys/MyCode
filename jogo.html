@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link 
+    rel="stylesheet" 
+    href="./Assets/style.css"
+    />
+    
+    <title>My Code | Jogo</title>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="nav-title">
+
+            <a href="./index.html#inicio"><h1>MY CODE</h1></a>
+
+        </div>
+
+        <button><i class="fa-solid fa-bars"></i></button>
+
+        <ul class="nav-list">
+
+            <a href="./index.html#inicio" class="nav-link"><li>Início</li></a>
+            <a href="./index.html#cm" class="nav-link"><li>Campo Minado</li></a>
+            <a href="./index.html#mj" class="nav-link"><li>Mário Jump</li></a>
+            <a href="./index.html#exemplos" class="nav-link"><li>Exemplos</li></a>
+
+        </ul>
+
+    </nav>
+
+    <!-- JOGO -->
+
+    <div class="campo-minado">
+
+        <div class="game-p">
+
+            <canvas id="game" width="518" height="518"></canvas>
+
+            <div class="btns-game">
+
+                <button class="btn-game" onclick="restartGame()">Reiniciar Jogo</button>
+                <button id="toggleMusicButton" class="btn-game">ON/OFF Música</button>
+
+            </div>
+
+        </div>
+
+        <div class="line"></div>
+
+        <div class="game-r">
+
+            <h1>Regras do Jogo</h1>
+
+            <ul>
+                <li><strong>Início do Jogo:</strong>
+                    <ul>
+                        <li>O jogo começa com um campo de células fechadas.</li>
+                        <li>Algumas células contêm bombas, e outras não.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Células:</strong>
+                    <ul>
+                        <li>Cada célula pode estar em um dos seguintes estados: fechada, aberta, ou contendo uma bandeira.</li>
+                        <li>Células fechadas podem ser abertas clicando nelas.</li>
+                        <li>Células abertas revelam seu conteúdo (bomba ou número de bombas adjacentes).</li>
+                        <li>Células contendo bandeira são marcadas pelo jogador como potenciais bombas.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Bandeiras:</strong>
+                    <ul>
+                        <li>Os jogadores podem marcar células suspeitas de conterem bombas com bandeiras.</li>
+                        <li>Bandeiras podem ser removidas ou adicionadas clicando em uma célula enquanto mantém a tecla Shift pressionada.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Conteúdo das Células:</strong>
+                    <ul>
+                        <li>Se uma célula contiver uma bomba e for aberta, o jogo acaba e o jogador perde.</li>
+                        <li>Se uma célula não contiver uma bomba e for aberta, ela mostrará um número indicando quantas bombas estão adjacentes a ela.</li>
+                        <li>Se uma célula não contiver bombas adjacentes, todas as células adjacentes serão automaticamente abertas.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Vitória:</strong>
+                    <ul>
+                        <li>O jogador vence quando todas as células sem bombas forem abertas.</li>
+                        <li>O jogador perde se abrir uma célula com uma bomba.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Reiniciar o Jogo:</strong>
+                    <ul>
+                        <li>O jogo pode ser reiniciado a qualquer momento, seja manualmente pelo jogador ou por meio de um botão de reinício.</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <audio id="winSound" src="./Assets/sound/success-fanfare-trumpets-6185.mp3" preload="auto"></audio>
+    <audio id="loseSound" src="./Assets/sound/videogame-death-sound-43894.mp3" preload="auto"></audio>
+    <audio id="backgroundMusic" src="./Assets/sound/lofi-study-112191.mp3" preload="auto" loop></audio>
+    <audio id="clickSound" src="./Assets/sound/click-151673.mp3" preload="auto"></audio>
+
+
+    <script 
+    src="./Assets/script.js"
+    ></script>
+
+</body>
+</html>

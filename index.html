@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link 
+    rel="stylesheet" 
+    href="./Assets/style.css"
+    />
+
+    <title>My Code | Home</title>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="nav-title">
+
+            <a href="./index.html#inicio"><h1>MY CODE</h1></a>
+
+        </div>
+
+        <button><i class="fa-solid fa-bars"></i></button>
+
+        <ul class="nav-list">
+
+            <a href="#inicio" class="nav-link"><li>Início</li></a>
+            <a href="#cm" class="nav-link"><li>Campo Minado</li></a>
+            <a href="#mj" class="nav-link"><li>Mário Jump</li></a>
+            <a href="#exemplos" class="nav-link"><li>Exemplos</li></a>
+
+        </ul>
+
+    </nav>
+
+    <!-- CONTEÚDO -->
+
+    <div class="content">
+
+        <!-- INICIO -->
+
+        <div class="inicio" id="inicio">
+
+            <img 
+            src="https://static.vecteezy.com/system/resources/previews/025/403/315/original/portrait-of-raccoon-isolated-illustration-ai-generative-png.png" 
+            width="15%" 
+            class="racoon"
+            />
+
+            <div class="texto">
+
+                <p>Olá! Esse é um site básico para demonstrar a <br>
+                atividade passada pelo professor Mário! <br>
+                No botão abaixo estará os exemplos que <br>
+                ele nos pediu para demonstrar!</p>
+
+                <a href="./Assets/Arquivos/exemplos.pdf" download="Exemplos de PW"><button>Atividades</button></a>
+
+            </div>
+
+        </div>
+        
+        <div class="line"></div>
+
+        <!-- JOGO -->
+
+        <div class="jogo" id="cm">
+
+            <img 
+            src="https://play-lh.googleusercontent.com/9rycf89uVflWQHRgAZm4P8GvT5Kpzzsoo77EWjDew0DiMhz3YmZhis5mgiWWWov5lUOr" 
+            width="15%"
+            class="camp"
+            >
+
+            <div class="texto">
+
+                <p>Bem, eu escolhi um jogo simples para fazer,<br>
+                    o nome dele é "Campo Minado"! Eu simplesmente<br>
+                    amo esse jogo, ele é de percepção e lógica,<br>
+                    muito legal para quem quer aprender raciocínio lógico.
+                </p>
+
+                <br>
+
+                <p>Se quiser jogar ele, aperte o botão abaixo! <br>
+                    Em baixo da tabela, delizando um pouco a tela, <br>
+                    estarão as regras!
+                </p>
+
+                <a href="./jogo.html"><button>Jogar Agora</button></a>
+
+            </div>
+
+        </div>
+
+        <div class="line"></div>
+
+        <!-- JOGO 1 -->
+
+        <div class="jogo" id="mj">
+
+            <img 
+            src="https://i.pinimg.com/474x/d7/05/d3/d705d3210e8e6186c01127b6a023bbf6.jpg" 
+            width="15%"
+            class="mario"
+            >
+
+            <div class="texto">
+
+                <p>Esse jogo foi feito pela Jhennifer,<br>
+                    o nome dele é "Mario Jump"! um simples<br>
+                    jogo de pular, parecido com o famoso jogo do<br>
+                    dinossauro quando estamos sem internet.
+                </p>
+
+                <br>
+
+                <p>Se quiser jogar ele, aperte o botão abaixo!
+                </p>
+
+                <a href="./Joguinho/index.html"><button>Jogar Agora</button></a>
+
+            </div>
+
+        </div>
+
+        <div class="line" id="exemplos"></div>
+
+        <!-- EXEMPLOS -->
+
+        <div class="exemplos">
+
+            <div class="texto text-ex">
+
+                <p>Esses cards abaixo são os exemplos da atividade que o nosso querido Mário passou! <br>
+                Aperte cada um individualmente, sem dois por vez, obrigada!
+                </p>
+
+            </div>
+
+            <div class="cards">
+
+                <div class="area2 card size">
+
+                    <div>
+                        <h3>Exemplo 01</h3>
+                        <p>Desenvolver um programa (Web) para exibir todos os números pares de um intervalo de
+                        1 até o valor informado pelo usuário. 
+                        Mostre a soma total desses valores</p>
+                    </div>
+
+                    <button class="btn-card" onclick="ex1()">Ver Exemplo</button>
+
+                </div>
+            
+                <div class="area3 card size">
+
+                    <div>
+                        <h3>Exemplo 02</h3>
+                        <p>Desenvolva uma página que leia uma temperatura e converta a ela para os graus Fahrenheit ou Celcius.</p>
+                    </div>
+
+                    <button class="btn-card" onclick="ex2()">Ver Exemplo</button>
+
+                </div>
+
+                <div class="area4 card size">
+
+                    <div>
+                        <h3>Exemplo 03</h3>
+                        <p>Desenvolva uma página que leia o nome, o valor e a quantidade vendida de três (3) produtos.
+                        Calcule o valor total da venda.
+                        </p>
+                    </div>
+
+                    <button class="btn-card" onclick="ex3()">Ver Exemplo</button>
+
+                </div>
+
+                <div class="area5 card size">
+
+                    <div>
+                        <h3>Exemplo 04</h3>
+                        <p>Desenvolva uma página que leia a quilometragem percorrida 
+                        por um determinado veículo e o valor do combustível. 
+                        Calcule o gasto dele, sabendo que o veículo percorre 8km/litro.</p>
+                    </div>
+
+                    <button class="btn-card" onclick="ex4()">Ver Exemplo</button>
+
+                </div>
+
+                <div class="area6 card size">
+
+                    <div>
+                        <h3>Exemplo 05</h3>
+                        <p>Desenvolva uma página para calcular o custo para assentar piso, 
+                        sabendo que o preço é de 36,00 por m². 
+                        O programa deve ler o comprimento e a largura total do cômodo.</p>
+                    </div>
+
+                    <button class="btn-card" onclick="ex5()">Ver Exemplo</button>
+
+                </div>
+
+                <div class="area7 card size">
+
+                    <div>
+                        <h3>Exemplo 06</h3>
+                        <p>Tendo como dados de entrada a altura e o sexo de uma pessoa a partir de uma caixa de combinação, 
+                        construa uma página que calcule seu peso ideal, utilizando as seguintes fórmulas:</p>
+                    </div>
+
+                    <button class="btn-card" onclick="ex6()">Ver Exemplo</button>
+
+                </div>
+
+            </div>
+
+            <div class="area8 card size">
+
+                <div>
+                    <h3>Exemplo 07</h3>
+                    <p>Crie uma página que receba N valores do usuário, armazene esses valores em um vetor. 
+                    Crie botões para mostrar todos os valores inseridos, o maior valor e o menor valor do vetor.</p>
+                </div>
+                
+                <div class="ex7">
+
+                    <div class="num">
+
+                        Números: <input type="text" id="txtNumeros">
+
+                    </div>
+
+                    <input type="button" value="Qual o maior?" onclick="ex7()" class="btn-ex7">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script 
+    src="./Assets/script.js">
+    </script>
+
+</body>
+</html>
